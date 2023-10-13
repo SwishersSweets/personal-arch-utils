@@ -1,0 +1,18 @@
+Emulators:
+          flatpaks:
+                    pcsx2
+                    rpcs3
+                    ppsspp
+                    duckstation
+                    xemu
+                    dplphin
+                    flycast
+                    cemu
+                    yuzu
+                    ryujinx
+                    citra
+                    melonDS
+                    SameBoy
+                    mGBA
+          non-flathub:
+                      vita3k
