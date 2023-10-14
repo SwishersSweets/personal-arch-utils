@@ -1,0 +1,14 @@
+# https://wiki.archlinux.org/title/installation_guide https://www.youtube.com/watch?v=68z11VAYMS8 (DenshiVideo)
+# https://wiki.artixlinux.org/Main/Installation       https://www.youtube.com/watch?v=dI3bGeT31Bo (Luke Smith)
+
+
+
+
+
+
+
+
+
+ARTIX AS PER LUKE SMITH 
+ls /sys/firmware/efi/efivars (if nothing = legacy boot) 
+
