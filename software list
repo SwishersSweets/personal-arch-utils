@@ -16,3 +16,44 @@ Emulators:
                     mGBA
           non-flathub:
                       vita3k
+Useful:
+          flatpak:
+                    flatseal
+                    librewolf
+                    tor browser
+                    mullvad browser
+                    brave browser
+                    element
+                    monero gui
+                    gajim
+           thunar
+          feh
+          nitrogen
+          passmgr
+          firefox
+          qbittorrent
+          newsboat
+          thunderbird
+          zathura
+          zathura-cb
+          gimp
+          alacritty
+          vim
+          hacksaw
+          shotgun
+          
+games/helper:
+              flatpak:
+                      heroic launcher
+                      spade cadet pinball
+                      polymc
+                      airshipper/valoreen
+          lutris
+          wine
+          steam/proton
+          
+useful shit with pacman
+          # pacman -Rns (software + dependecies) 
+          $ pacman -Qdt (unneeded dependencies) 
+          $ pacman -Ss (search)
+          $/#  pacman -Fy /usr/bin/{software} (tells the package from the bin) (edited)
