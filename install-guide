@@ -21,8 +21,8 @@ sdX1 /boot (boot) 512M/1G (has to be a fat32
 sdX2 / (root) XG (what you want ext4 btrfs xfs ntfs)
 sdX3 /home (optional) XG (what you want ext4 btrfs xfs ntfs)
 
-mkfs.fat -F32 /dev/sdX1 (to make boot fat32)
-.# mkds.ext4 /dev/sdX2/3/4
+.# mkfs.fat -F32 /dev/sdX1 (to make boot fat32)
+.# mkfs.ext4 /dev/sdX2/3/4
 
 (optional) if you want to wipe drive 
 .# dd if =/dev/urandom of=/dev/sdX2
