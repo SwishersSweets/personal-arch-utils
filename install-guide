@@ -1,6 +1,6 @@
 # https://wiki.archlinux.org/title/installation_guide https://www.youtube.com/watch?v=68z11VAYMS8 (DenshiVideo)
-# https://wiki.artixlinux.org/Main/Installation       https://www.youtube.com/watch?v=dI3bGeT31Bo (Luke Smith)
-
+# https://wiki.artixlinux.org/Main/Installation       https://www.youtube.com/watch?v=nCc_4fSYzRA&t=1678s (Luke Smith)
+# $ = normal user # = sudo user 
 
 
 
@@ -10,5 +10,73 @@
 
 
 ARTIX AS PER LUKE SMITH 
-ls /sys/firmware/efi/efivars (if nothing = legacy boot) 
+.$ ls /sys/firmware/efi/efivars (if nothing = legacy boot) 
 
+.$ lsblk (find drive to install it on) (sdX = normal drives nvmeYnZ (X = number discovered so a = 1) (Y = pcie/nvme controller 0 = controller 1) (Z = number discovered so 1 = 1) ) 
+.$ lsblk -fs (-fs shows mroe info) like UUID 
+format drives (cfdisk /dev/sdX fdisk /dev/sdX) requires root 
+
+formats: 
+sdX1 /boot (boot) 512M/1G (has to be a fat32
+sdX2 / (root) XG (what you want ext4 btrfs xfs ntfs)
+sdX3 /home (optional) XG (what you want ext4 btrfs xfs ntfs)
+
+mkfs.fat -F32 /dev/sdX1 (to make boot fat32)
+.# mkds.ext4 /dev/sdX2/3/4
+
+(optional) if you want to wipe drive 
+.# dd if =/dev/urandom of=/dev/sdX2
+
+mount partitions 
+# mkdir /mnt/boot 
+(optional) # mkdir /mnt/home
+.# mount /dev/sdX2 /mnt
+.# mount /dev/sdX1 /mnt/boot
+(optional) .# mount /dev/sdX3 /mnt/home
+
+installing the base system
+.# basestrap /mnt base base-devel intisystem linux linux-firmware vim 
+(in the root drive of the install so if /mnt = /dev/sdf2 its gonna become the root partition of /sdf) 
+(base is the base system, base-dvel has basic stuff like sudo, initsystems: openrc + elogind-openrc, runit + elogind-runit, s6-base elogind-s6, dinit elogind-dinit) 
+(linux is the kernel and linux firmware is things like wifi firmware vim is for the text editor)
+
+fstabgen (generates a tab with all the mounted partitions in this folder -U uses UUIDs )
+.# fstabgen -U /mnt >> /mnt/etc/fstab
+
+chroot
+.# artools-chroot /mnt 
+
+time zone 
+.# ln -sf /usr/sahre/zoneinfo/America/New_York (EST TZ) /etc/localtime
+.# hwclokc --systohc
+
+locale
+.# vim /etc/locale.gen
+uncomment en_US.UTF-8 & en_US ISO-8859 UTF-8 
+locale-gen
+.# vim /etc/locale.conf
+LANG=en_US.UTF-8
+
+.# pacman -S networkmanager networkmanager-(initsystem) 
+check wiki for how to start network manager 
+
+.# vim /etc/hostname 
+name you want
+
+.# vim /etc/hosts
+127.0.0.1  localhost
+::1        localhost
+127.0.0.1  hostname.localdomain hostname
+
+BOOTLOADER TIME 
+.# pacman -S grub efibootmgr (if on efi) os-prober (if you want to dual-boot)
+.# grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=grub (for EFI)
+.# grub-install --recheck /dev/sda (for BIOS systems)
+.# grub-mkconfig -o /boot/grub/grub.cfg 
+
+password
+.# passwd 
+
+user
+# useradd -m -G group user
+# passwd user
