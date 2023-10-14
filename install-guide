@@ -10,6 +10,7 @@
 
 
 ARTIX AS PER LUKE SMITH 
+EFI or legacy/bios
 .$ ls /sys/firmware/efi/efivars (if nothing = legacy boot) 
 
 .$ lsblk (find drive to install it on) (sdX = normal drives nvmeYnZ (X = number discovered so a = 1) (Y = pcie/nvme controller 0 = controller 1) (Z = number discovered so 1 = 1) ) 
@@ -80,3 +81,8 @@ password
 user
 # useradd -m -G group user
 # passwd user
+
+now you have a minimal system that works you can check the artix wiki to install a desktop environment or a window manager like larbs or dwm 
+https://wiki.artixlinux.org/Main/Installation#Desktop_Environment
+https://larbs.xyz/
+dwm.suckless.org
