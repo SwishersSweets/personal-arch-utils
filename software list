@@ -16,6 +16,7 @@ Emulators:
                     mGBA
           non-flathub:
                       vita3k
+                      xenia (not even on linux)
 Useful:
           flatpak:
                     flatseal
