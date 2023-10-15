@@ -57,3 +57,5 @@ useful shit with pacman
           $ pacman -Qdt (unneeded dependencies) 
           $ pacman -Ss (search)
           $/#  pacman -Fy /usr/bin/{software} (tells the package from the bin) (edited)
+          $ pacman -Qn (all packages installed from main repo)
+          $ pacman -Qm (all packages installed from the AUR)
