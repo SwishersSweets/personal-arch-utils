@@ -18,9 +18,10 @@ Emulators:
                     melonDS
                     SameBoy
                     mGBA
-          non-flathub:
-                      vita3k
-                      xenia (not even on linux)
+          AUR:
+                    vita3k                     
+xenia (not even on linux)
+
 Useful:
           flatpak:
                     flatseal
@@ -32,7 +33,9 @@ Useful:
                     gajim
           AUR:
                     Thorium-bin
-           thunar
+          Main Repo:
+          thunar 
+          gvsf
           feh
           passmgr
           firefox
@@ -51,7 +54,7 @@ games/helper:
               flatpak:
                       heroic launcher
                       spade cadet pinball
-                      polymc
+                      multimc polymc prism
                       airshipper/valoreen
           lutris
           wine
