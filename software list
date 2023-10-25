@@ -30,9 +30,11 @@ Useful:
                     element
                     monero gui
                     gajim
+          AUR:
+                    Thorium-bin
            thunar
           feh
-          nitrogen
+          nitrogen 
           passmgr
           firefox
           qbittorrent
