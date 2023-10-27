@@ -67,3 +67,4 @@ useful shit with pacman
           $/#  pacman -Fy /usr/bin/{software} (tells the package from the bin) (edited)
           $ pacman -Qn (all packages installed from main repo)
           $ pacman -Qm (all packages installed from the AUR)
+          $ sudo pacman -Qi (tells you the version)
