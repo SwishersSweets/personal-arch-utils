@@ -2,6 +2,7 @@ Hyprland:
           swaybg
           fuzzel
           waybar
+          hypershot (AUR)
 font:
           ttf-jetbrains-mono-git (AUR)
           ttf-font-awesome 
