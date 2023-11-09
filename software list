@@ -1,5 +1,9 @@
 Hyprland:
           swaybg
+          fuzzel
+          waybar
+font:
+          jetbrains-mono-git (AUR)
           
 
 Emulators:
