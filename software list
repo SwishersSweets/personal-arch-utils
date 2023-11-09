@@ -3,8 +3,8 @@ Hyprland:
           fuzzel
           waybar
 font:
-          jetbrains-mono-git (AUR)
-          
+          ttf-jetbrains-mono-git (AUR)
+          ttf-font-awesome 
 
 Emulators:
           flatpaks:
