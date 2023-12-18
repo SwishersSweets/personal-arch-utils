@@ -30,14 +30,14 @@ xenia (not even on linux)
 Useful:
           flatpak:
                     flatseal
-                    librewolf
                     tor browser
                     mullvad browser
                     element
                     monero gui
                     gajim
           AUR:
-                    Thorium-bin
+                    Ungoogled-Chromium
+                    Librewolf
           Main Repo:
           thunar 
           gvsf
