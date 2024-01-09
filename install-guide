@@ -23,6 +23,12 @@ format drives (cfdisk /dev/sdX fdisk /dev/sdX) requires root
 .# mkfs.ext4 /dev/sdX2/3/4
 .# mkswap /dev/sdX2/3/4
 
+mounting drives
+start with root
+if efi then after mounting root partitions then
+.# mkdir /mnt/boot/efi
+and then mount boot partition
+
 Installing the base system
 .# pacstrap /mnt/ linux linux-firmware vim grub efibootmgr (for UEFI)
 
