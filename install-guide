@@ -1,6 +1,6 @@
-# https://wiki.archlinux.org/title/installation_guide https://www.youtube.com/watch?v=68z11VAYMS8 (DenshiVideo)
-# https://wiki.artixlinux.org/Main/Installation       https://www.youtube.com/watch?v=nCc_4fSYzRA&t=1678s (Luke Smith)
-# $ = normal user # = sudo user 
+.# https://wiki.archlinux.org/title/installation_guide https://www.youtube.com/watch?v=68z11VAYMS8 (DenshiVideo)
+.# https://wiki.artixlinux.org/Main/Installation       https://www.youtube.com/watch?v=nCc_4fSYzRA&t=1678s (Luke Smith)
+.# $ = normal user # = sudo user 
 
 
 
@@ -29,7 +29,7 @@ sdX3 /home (optional) XG (what you want ext4 btrfs xfs ntfs)
 .# dd if =/dev/urandom of=/dev/sdX2
 
 mount partitions 
-# mkdir /mnt/boot 
+.# mkdir /mnt/boot 
 (optional) # mkdir /mnt/home
 .# mount /dev/sdX2 /mnt
 .# mount /dev/sdX1 /mnt/boot
@@ -79,8 +79,8 @@ password
 .# passwd 
 
 user
-# useradd -m -G group user
-# passwd user
+.# useradd -m -G group user
+.# passwd user
 
 now you have a minimal system that works you can check the artix wiki to install a desktop environment or a window manager like larbs or dwm 
 https://wiki.artixlinux.org/Main/Installation#Desktop_Environment
