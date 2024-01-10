@@ -26,7 +26,7 @@ format drives (cfdisk /dev/sdX fdisk /dev/sdX) requires root
 mounting drives
 start with root
 if efi then after mounting root partitions then
-.# mkdir /mnt/boot/efi
+.# mkdir -p /mnt/boot/efi
 and then mount boot partition
 
 Installing the base system
