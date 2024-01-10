@@ -52,7 +52,7 @@ LANG=en_US.UTF-8
 
 grub
 .# grub-install /dev/sda (easy way)
-.# grub mkconfig -o /boot/grub/grub.cfg
+.# grub-mkconfig -o /boot/grub/grub.cfg
 
 root password/user setup 
 .# passwd
