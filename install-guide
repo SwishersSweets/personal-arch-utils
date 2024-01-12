@@ -115,7 +115,7 @@ fstabgen (generates a tab with all the mounted partitions in this folder -U uses
 .# fstabgen -U /mnt >> /mnt/etc/fstab
 
 chroot
-.# artools-chroot /mnt 
+.# artix-chroot /mnt 
 
 time zone 
 .# ln -sf /usr/share/zoneinfo/America/New_York (EST TZ) /etc/localtime
